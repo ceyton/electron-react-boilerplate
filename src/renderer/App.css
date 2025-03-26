@@ -3,20 +3,18 @@
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
 body {
-  position: relative;
+  margin: 0;
+  padding: 0;
   color: white;
   height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
+  background: #2c3e50;
   font-family: sans-serif;
-  overflow-y: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
 }
 
 button {
@@ -59,4 +57,124 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+}
+
+.game-dashboard {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stats-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.stat-box {
+  background-color: #000;
+  padding: 2rem;
+  border: 2px solid #fff;
+  text-align: center;
+  border-radius: 10px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.stat-label {
+  color: #ffd700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hit-percentage {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+.control-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.control-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.start-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.pause-button {
+  background-color: #f1c40f;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.stop-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reset-button {
+  background-color: #f39c12;
+  color: white;
 }
